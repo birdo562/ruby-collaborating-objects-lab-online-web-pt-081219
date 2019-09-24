@@ -25,7 +25,7 @@ class Artist
   end
 
   def songs
-    @songs
+    Song.all.select {|song| song.artist == self}
   end
 
   def save
